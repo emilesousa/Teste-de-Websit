@@ -4,13 +4,16 @@
 :root {
     --primary-green: #00cc00;
     --secondary-green: #00b300;
-    --light-green: #e6ffe6;
+    --light-green: #538149;
     --text-dark: #333;
     --text-light: #666;
-    --white: #000;
+    --white: #fff;
     --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     --border-radius: 8px;
     --transition: all 0.3s ease;
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
 }
 
 /* Reset e Base */
@@ -24,21 +27,21 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
-    background-color: var(--light-green);
+    background-color: var(--light-green); /* Fundo claro e verde suave */
 }
 
 /* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--spacing-medium);
 }
 
 /* Header */
 header {
     background: var(--primary-green);
     color: var(--white);
-    padding: 1.5rem 0;
+    padding: var(--spacing-large) 0;
     position: fixed;
     width: 100%;
     top: 0;
@@ -66,7 +69,7 @@ header .container {
     color: var(--white);
     text-decoration: none;
     font-size: 1.1rem;
-    padding: 0.5rem 1.5rem;
+    padding: var(--spacing-small) var(--spacing-large);
     transition: var(--transition);
 }
 
@@ -87,12 +90,12 @@ header .container {
 
 /* Main */
 main {
-    margin-top: 100px;
+    margin-top: 120px; /* Mais espaço para o header fixo */
 }
 
 .section {
     display: none;
-    padding: 60px 0;
+    padding: var(--spacing-large) 0;
     min-height: 100vh;
 }
 
@@ -103,26 +106,27 @@ main {
 /* Hero */
 .hero {
     text-align: center;
-    padding: 4rem 0;
+    padding: var(--spacing-large) 0;
     background: url('https://via.placeholder.com/1920x600?text=Hero+Image') no-repeat center/cover;
     color: var(--white);
     border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-large);
 }
 
 .hero h1 {
     font-size: 3.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-medium);
 }
 
 .subtitle {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: var(--spacing-large);
 }
 
 /* Botões */
 .btn {
     display: inline-block;
-    padding: 12px 24px;
+    padding: var(--spacing-medium) var(--spacing-large);
     border: none;
     border-radius: var(--border-radius);
     font-size: 1.1rem;
@@ -143,13 +147,13 @@ main {
 .mission {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin: 2rem 0;
+    gap: var(--spacing-large);
+    margin: var(--spacing-large) 0;
 }
 
 .mission-item {
     background: var(--white);
-    padding: 1.5rem;
+    padding: var(--spacing-medium);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     text-align: center;
@@ -157,19 +161,19 @@ main {
 
 .mission-item h3 {
     color: var(--primary-green);
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-small);
 }
 
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: var(--spacing-large);
+    margin-top: var(--spacing-large);
 }
 
 .team-card {
     background: var(--white);
-    padding: 1.5rem;
+    padding: var(--spacing-medium);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     text-align: center;
@@ -185,17 +189,18 @@ main {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-small);
 }
 
 .team-card h3 {
     color: var(--primary-green);
+    margin-bottom: var(--spacing-small);
 }
 
 /* Biografia */
 .timeline {
     position: relative;
-    margin: 2rem 0;
+    margin: var(--spacing-large) 0;
 }
 
 .timeline::before {
@@ -212,11 +217,11 @@ main {
 .timeline-item {
     position: relative;
     width: 45%;
-    padding: 1rem;
+    padding: var(--spacing-medium);
     background: var(--white);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-    margin: 1rem 0;
+    margin: var(--spacing-medium) 0;
 }
 
 .timeline-item:nth-child(odd) {
@@ -231,9 +236,9 @@ main {
     display: inline-block;
     background: var(--primary-green);
     color: var(--white);
-    padding: 0.5rem 1rem;
+    padding: var(--spacing-small) var(--spacing-medium);
     border-radius: var(--border-radius);
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-small);
 }
 
 /* Localização */
@@ -242,19 +247,20 @@ main {
     width: 100%;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-    margin: 2rem 0;
+    margin: var(--spacing-large) 0;
 }
 
 .contact-details {
     background: var(--white);
-    padding: 1.5rem;
+    padding: var(--spacing-medium);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
+    margin-top: var(--spacing-large);
 }
 
 /* Área do Usuário */
 .tabs {
-    margin-top: 2rem;
+    margin-top: var(--spacing-large);
     background: var(--white);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
@@ -269,7 +275,7 @@ main {
 
 .tab-link {
     display: block;
-    padding: 1rem 2rem;
+    padding: var(--spacing-medium) var(--spacing-large);
     color: var(--white);
     text-decoration: none;
     transition: var(--transition);
@@ -284,7 +290,7 @@ main {
 }
 
 .tab-content {
-    padding: 2rem;
+    padding: var(--spacing-large);
 }
 
 .tab-panel {
@@ -298,23 +304,24 @@ main {
 .form {
     max-width: 400px;
     margin: 0 auto;
+    padding: var(--spacing-large);
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--spacing-large);
 }
 
 .form-group label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: var(--spacing-small);
     color: var(--text-dark);
     font-weight: 500;
 }
 
 .form-group input {
     width: 100%;
-    padding: 0.75rem;
-    border: 1px solid #ccc;
+    padding: var(--spacing-medium);
+    border: 1px solid #b3ffa4;
     border-radius: var(--border-radius);
     font-size: 1rem;
     transition: var(--transition);
@@ -327,10 +334,10 @@ main {
 }
 
 .preview {
-    margin-top: 1rem;
+    margin-top: var(--spacing-medium);
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: var(--spacing-small);
 }
 
 .preview img {
@@ -344,8 +351,9 @@ main {
 footer {
     background: var(--primary-green);
     color: var(--white);
-    padding: 1.5rem 0;
+    padding: var(--spacing-large) 0;
     text-align: center;
+    margin-top: var(--spacing-large);
 }
 
 footer a {
@@ -368,10 +376,10 @@ footer a:hover {
         flex-direction: column;
         width: 100%;
         position: absolute;
-        top: 70px;
+        top: 80px;
         left: 0;
         background: var(--primary-green);
-        padding: 1rem 0;
+        padding: var(--spacing-medium) 0;
     }
 
     .nav-list.active {
@@ -379,7 +387,7 @@ footer a:hover {
     }
 
     .nav-link {
-        padding: 1rem;
+        padding: var(--spacing-medium);
         text-align: center;
     }
 
@@ -410,5 +418,6 @@ footer a:hover {
 
     .form {
         max-width: 100%;
+        padding: var(--spacing-medium);
     }
 }
